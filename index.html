@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSMU - Jinnah Sindh Medical University</title>
+    <!-- Defensive fallback for sandboxed iframes preventing window.fetch assignments -->
+    <script>
+      (function() {
+        try {
+          var targetObj = window;
+          var propName = 'fetch';
+          var originalFetch = targetObj[propName];
+          if (originalFetch) {
+            var desc = Object.getOwnPropertyDescriptor(targetObj, propName);
+            if (!desc || desc.configurable) {
+              var boundFetch = originalFetch.bind(targetObj);
+              Object.defineProperty(targetObj, propName, {
+                get: function() { return boundFetch; },
+                set: function(val) { boundFetch = val; },
+                configurable: true,
+                enumerable: true
+              });
+            }
+          }
+        } catch (e) {
+          console.warn("Defensive fetch-override bypassed:", e);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

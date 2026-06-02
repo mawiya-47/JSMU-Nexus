@@ -1,0 +1,6 @@
+{
+  "liveServer.settings.multiRootWorkspaceName": "jsmu-nexus",
+  "tailwindCSS.lint.cssConflict": "ignore",
+  "tailwindCSS.lint.recommendedVariantOrder": "ignore",
+  "css.validate": false
+}

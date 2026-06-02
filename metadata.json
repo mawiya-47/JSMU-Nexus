@@ -1,0 +1,6 @@
+{
+  "name": "JSMU Portal",
+  "description": "Complete full-stack Jinnah Sindh Medical University Management Portal with admissions, student results search, news and events management, contact channels, and a secure administration panel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
