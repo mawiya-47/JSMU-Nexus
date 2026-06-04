@@ -71,7 +71,7 @@ npm run dev
 
 ## 📸 Preview
 
-> 🌐 Live at: *coming soon on Vercel*
+> 🌐 Live at:jsmu-nexus.vercel.app
 
 ---
 
